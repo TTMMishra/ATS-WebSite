@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOIDA ATS - Automated Testing Station</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+/* Header */
+
+header{
+background:#003366;
+padding:20px 50px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:white;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:18px;
+}
+
+.menu a:hover{
+color:#ffd700;
+}
+
+/* Hero */
+
+.hero{
+height:550px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc');
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+}
+
+.hero p{
+font-size:25px;
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#ffd700;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:5px;
+}
+
+/* Sections */
+
+.section{
+padding:80px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+color:#003366;
+font-size:40px;
+}
+
+/* Cards */
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.1);
+flex:1;
+min-width:250px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#003366;
+margin-bottom:15px;
+}
+
+/* Stats */
+
+.stats{
+background:#003366;
+color:white;
+padding:70px 10%;
+}
+
+.stats-container{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h1{
+font-size:60px;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Contact */
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.1);
+line-height:35px;
+}
+
+/* Footer */
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+.menu{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+NOIDA ATS
+</div>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#vehicle">Vehicle Types</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Automated Testing Station</h1>
+
+<p>
+Vehicle Fitness Testing & Inspection Services
+</p>
+
+<a href="#contact" class="btn">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>About NOIDA ATS</h2>
+
+<p style="text-align:center;font-size:20px;line-height:35px;">
+NOIDA ATS provides automated vehicle fitness testing services using modern technology and advanced testing equipment. We ensure commercial vehicles meet all safety and environmental standards.
+</p>
+
+</section>
+
+<section class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Brake Testing</h3>
+<p>Automated brake efficiency testing.</p>
+</div>
+
+<div class="card">
+<h3>Emission Testing</h3>
+<p>Vehicle pollution compliance inspection.</p>
+</div>
+
+<div class="card">
+<h3>Headlight Testing</h3>
+<p>Headlight beam alignment testing.</p>
+</div>
+
+<div class="card">
+<h3>Suspension Testing</h3>
+<p>Suspension and shock absorber inspection.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="vehicle">
+
+<h2>Vehicle Categories</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>LCV</h3>
+<p>Light Commercial Vehicles</p>
+</div>
+
+<div class="card">
+<h3>HCV</h3>
+<p>Heavy Commercial Vehicles</p>
+</div>
+
+<div class="card">
+<h3>Bus</h3>
+<p>Passenger Transport Vehicles</p>
+</div>
+
+<div class="card">
+<h3>Taxi</h3>
+<p>Commercial Passenger Vehicles</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stats-container">
+
+<div class="stat">
+<h1>10K+</h1>
+<p>Vehicles Tested</p>
+</div>
+
+<div class="stat">
+<h1>100%</h1>
+<p>Automated Testing</p>
+</div>
+
+<div class="stat">
+<h1>24x7</h1>
+<p>Support</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-box">
+
+<p><b>Address:</b> NOIDA ATS, Greater Noida, Uttar Pradesh</p>
+
+<p><b>Phone:</b> +91 XXXXX XXXXX</p>
+
+<p><b>Email:</b> info@noidaats.com</p>
+
+<p><b>Working Hours:</b> Monday - Saturday | 10:00 AM - 06:00 PM</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>NOIDA ATS</h3>
+
+<p>Automated Testing Station</p>
+
+<p>Dhoom ManikPur Dadri Greater Noida, Uttar Pradesh</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
