@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +57,7 @@ font-size:28px;
 font-weight:800;
 color:white;
 letter-spacing:1px;
+text-align:center;
 }
 
 .menu{
@@ -192,6 +194,43 @@ text-shadow:0 5px 25px rgba(0,0,0,0.4);
 .hero-content p{
 font-size:25px;
 line-height:40px;
+}
+
+/* MOVING TEXT */
+
+.moving-text{
+width:100%;
+overflow:hidden;
+background:linear-gradient(90deg,#0f172a,#1e293b);
+padding:14px 0;
+border-radius:10px;
+margin-top:25px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.moving-text span{
+display:inline-block;
+white-space:nowrap;
+color:#fff;
+font-size:24px;
+font-weight:700;
+text-shadow:0 0 10px #38bdf8;
+
+padding-left:100%;
+
+animation:moveText 15s linear infinite;
+}
+
+@keyframes moveText{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
 }
 
 .hero-btn{
@@ -446,72 +485,153 @@ transition:0.4s;
 transform:scale(1.1);
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:768px){
 
 header{
-padding:20px;
+padding:15px;
 }
 
 nav{
 flex-direction:column;
+gap:15px;
 }
 
 .logo{
-font-size:22px;
+font-size:18px;
+line-height:32px;
 text-align:center;
 }
 
 .menu{
-margin-top:15px;
 justify-content:center;
+gap:5px;
 }
 
 .menu a{
-display:inline-block;
-margin:10px;
+margin:5px;
+font-size:15px;
 }
 
 .hero{
 height:auto;
-padding:120px 20px;
+padding:110px 15px 70px;
+background-attachment:scroll;
 }
 
 .hero-content{
-padding:35px 25px;
+padding:30px 18px;
+border-radius:20px;
+}
+
+.gov-logo{
+width:80px;
+}
+
+.approved{
+font-size:15px;
+line-height:26px;
+margin-bottom:18px;
 }
 
 .hero-content h1{
-font-size:45px;
+font-size:42px;
+line-height:1.2;
 }
 
 .hero-content p{
 font-size:18px;
-line-height:32px;
-}
-
-.approved{
-font-size:16px;
 line-height:30px;
 }
 
 .section{
-padding:70px 5%;
+padding:60px 5%;
 }
 
-.slide-track img{
-width:250px;
-height:180px;
+.section h2{
+font-size:32px;
+margin-bottom:35px;
 }
 
-.stat h1{
-font-size:45px;
+.about-text{
+font-size:17px;
+line-height:32px;
+}
+
+.cards{
+gap:20px;
+}
+
+.card{
+padding:25px;
+}
+
+.card h3{
+font-size:21px;
+}
+
+.card p{
+font-size:15px;
+line-height:28px;
+}
+
+.service-icon{
+font-size:42px;
 }
 
 .vehicle-img{
-width:120px;
-height:90px;
+width:100px;
+height:80px;
+}
+
+.stats{
+padding:70px 5%;
+}
+
+.stat h1{
+font-size:42px;
+}
+
+.stat p{
+font-size:18px;
+}
+
+.slide-track img{
+width:220px;
+height:160px;
+}
+
+.contact-box{
+padding:25px;
+}
+
+.contact-box p{
+font-size:16px;
+line-height:34px;
+}
+
+.contact-form input,
+.contact-form textarea{
+font-size:15px;
+padding:14px;
+}
+
+footer{
+padding:35px 20px;
+font-size:14px;
+line-height:30px;
+}
+
+.whatsapp{
+width:58px;
+height:58px;
+font-size:28px;
+}
+
+.moving-text span{
+font-size:16px;
+animation:moveText 12s linear infinite;
 }
 
 }
@@ -527,7 +647,7 @@ height:90px;
 <nav>
 
 <div class="logo">
-Pranamroadguru Auto Fitness Pvt. Ltd(ATS)
+Pranamroadguru Auto Fitness Pvt. Ltd (ATS)
 </div>
 
 <div class="menu">
@@ -544,8 +664,6 @@ Pranamroadguru Auto Fitness Pvt. Ltd(ATS)
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -555,11 +673,9 @@ src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
 class="gov-logo">
 
 <p class="approved">
-
 Approved By Ministry of Road Transport & Highways
 <br>
 Government of India
-
 </p>
 
 <h1>ATS NOIDA</h1>
@@ -571,336 +687,13 @@ Fitness Testing Station
 </p>
 
 <div class="moving-text">
-  <span>🚗 Get your Vehicle Fitness Report After Testing At Our ATS 🚗</span>
-</div>
-
-<style>
-.moving-text {
-  width: 100%;
-  overflow: hidden;
-  background: linear-gradient(90deg, #0f172a, #1e293b);
-  padding: 14px 0;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.moving-text span {
-  display: inline-block;
-  white-space: nowrap;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 10%;
-  animation: moveText 25s linear infinite;
-  text-shadow: 0 0 10px #38bdf8;
-  font-family: Arial, sans-serif;
-}
-
-@keyframes moveText {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-</style>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<h2>About ATS NOIDA</h2>
-
-<p class="about-text">
-
-NOIDA ATS provides advanced automated vehicle fitness testing services using modern inspection technology and high precision testing equipment.
-
-We ensure all commercial vehicles meet government safety, performance and environmental standards through accurate automated testing systems.
-
-</p>
-
-</section>
-
-<!-- SERVICES -->
-
-<section class="section" id="services">
-
-<h2>Our Services</h2>
-
-<div class="cards">
-
-<div class="card">
-<div class="service-icon">🛞</div>
-<h3>Roller Brake Test</h3>
-<p>Advanced automated brake testing system for checking braking efficiency and safety.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">🚘</div>
-<h3>Suspension Test</h3>
-<p>High precision suspension testing machine for inspecting vehicle balance and stability.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">↔️</div>
-<h3>Side Slip Test</h3>
-<p>Accurate wheel alignment and side slip inspection system for road safety.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">⏱️</div>
-<h3>Speedometer Test</h3>
-<p>Automated speedometer calibration and testing equipment for accurate measurement.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">💡</div>
-<h3>Headlamp Beam Test</h3>
-<p>Headlight beam alignment and intensity testing system for better visibility.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">🔊</div>
-<h3>Noise & Horn Sound Meter</h3>
-<p>Noise level and horn sound testing equipment for compliance and safety.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">⚡</div>
-<h3>HV Safety Test</h3>
-<p>Advanced high voltage safety testing system for EV inspection.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">🖥️</div>
-<h3>OBD Tools</h3>
-<p>Modern onboard diagnostic tools for detecting ECU and engine faults.</p>
-</div>
-
-<div class="card">
-<div class="service-icon">🌿</div>
-<h3>Emission Test</h3>
-<p>Emission testing systems for Diesel, CNG and EV vehicles.</p>
+<span>🚗 Get your Vehicle Fitness Report After Testing At Our ATS 🚗</span>
 </div>
 
 </div>
 
 </section>
-
-<!-- VEHICLE TYPES -->
-
-<section class="section" id="vehicle">
-
-<h2>Vehicle Categories</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img 
-src="https://cdn-icons-png.flaticon.com/512/3774/3774278.png"
-class="vehicle-img">
-
-<h3>LCV</h3>
-
-<p>Light Commercial Vehicles</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:90px; margin-bottom:20px;">
-🚛
-</div>
-
-<h3>HCV</h3>
-
-<p>Heavy Commercial Vehicles</p>
-
-</div>
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stats-container">
-
-<div class="stat">
-<h1>10K+</h1>
-<p>Vehicles Tested</p>
-</div>
-
-<div class="stat">
-<h1>100%</h1>
-<p>Automated Testing</p>
-</div>
-
-<div class="stat">
-<h1>24x7</h1>
-<p>Support</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="section" id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="slider">
-
-<div class="slide-track">
-
-<img src="ATS1.jpg">
-<img src="ATS2.jpeg">
-<img src="ATS3.jpeg">
-<img src="ATS4.jpeg">
-<img src="ATS5.jpeg">
-<img src="ATS.webp">
-
-<img src="ATS1.jpg">
-<img src="ATS2.jpeg">
-<img src="ATS3.jpeg">
-<img src="ATS4.jpeg">
-<img src="ATS5.jpeg">
-<img src="ATS.webp">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section" id="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-
-<p>
-📍 <b>Address:</b>
-Kharsa No - 50 Dhoom Manikpur Dadri Greater Noida, Uttar Pradesh
-</p>
-
-<p>
-📞 <b>Phone:</b>
-+91-8882162152
-</p>
-
-<p>
-📧 <b>Email:</b>
-Noidaatsroadguru@gmail.com
-</p>
-
-<p>
-🕒 <b>Working Hours:</b>
-Monday - Saturday | 10:00 AM - 06:00 PM
-</p>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<textarea placeholder="Your Message"></textarea>
-
-<button type="submit">
-Send Message
-</button>
-
-</form>
-
-<div style="margin-top:40px;">
-
-<iframe
-src="https://www.google.com/maps?q=Kharsa+No+50+Dhoom+Manikpur+Dadri+Greater+Noida+Uttar+Pradesh&output=embed"
-width="100%"
-height="350"
-style="border:0;border-radius:15px;"
-allowfullscreen=""
-loading="lazy">
-
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<h3>NOIDA ATS</h3>
-
-<p>Automated Testing Station</p>
-
-<p>Dhoom Manikpur Dadri Greater Noida, Uttar Pradesh</p>
-
-<p>Operated By Pranamroadguru Pvt. Ltd.</p>
-
-<p>© 2026 All Rights Reserved</p>
-
-</footer>
-
-<!-- WHATSAPP -->
-
-<a href="https://wa.me/918882162152"
-class="whatsapp"
-target="_blank">
-
-💬
-
-</a>
-
-<!-- ANIMATION SCRIPT -->
-
-<script>
-
-const cards=document.querySelectorAll('.card');
-
-window.addEventListener('scroll',()=>{
-
-cards.forEach(card=>{
-
-const top=card.getBoundingClientRect().top;
-
-if(top < window.innerHeight-100){
-
-card.style.opacity='1';
-card.style.transform='translateY(0)';
-
-}
-
-});
-
-});
-
-cards.forEach(card=>{
-
-card.style.opacity='0';
-card.style.transform='translateY(50px)';
-card.style.transition='0.8s';
-
-});
-
-</script>
 
 </body>
 </html>
+```
