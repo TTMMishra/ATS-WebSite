@@ -1,6 +1,7 @@
-```html
+```html id="fullats01"
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -35,9 +36,8 @@ overflow-x:hidden;
 /* HEADER */
 
 header{
-background:rgba(8,20,40,0.95);
-backdrop-filter:blur(10px);
-padding:18px 60px;
+background:#081428;
+padding:18px 50px;
 position:sticky;
 top:0;
 z-index:1000;
@@ -52,7 +52,7 @@ flex-wrap:wrap;
 }
 
 .logo{
-font-size:28px;
+font-size:26px;
 font-weight:800;
 color:white;
 text-align:center;
@@ -60,34 +60,15 @@ text-align:center;
 
 .menu{
 display:flex;
-align-items:center;
 flex-wrap:wrap;
-gap:10px;
+gap:15px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-size:17px;
-font-weight:500;
+font-size:16px;
 transition:0.3s;
-position:relative;
-}
-
-.menu a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:#ff9933;
-transition:0.4s;
-}
-
-.menu a:hover::after{
-width:100%;
 }
 
 .menu a:hover{
@@ -97,67 +78,54 @@ color:#ff9933;
 /* HERO */
 
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
+min-height:100vh;
 
 background:
-linear-gradient(rgba(5,15,35,0.82),rgba(5,15,35,0.85)),
+linear-gradient(rgba(5,15,35,0.85),rgba(5,15,35,0.85)),
 url('ATS1.jpg');
 
 background-size:cover;
 background-position:center;
-background-attachment:fixed;
 
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+
+padding:120px 20px;
 color:white;
 }
 
 .hero-content{
-position:relative;
-z-index:2;
-
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-
-padding:60px;
-border-radius:30px;
-
+padding:50px;
+border-radius:25px;
 max-width:900px;
-
-border:1px solid rgba(255,255,255,0.15);
-
-box-shadow:
-0 8px 40px rgba(0,0,0,0.35);
+backdrop-filter:blur(8px);
 }
 
 .gov-logo{
-width:120px;
-margin-bottom:25px;
+width:110px;
+margin-bottom:20px;
 }
 
 .approved{
-font-size:22px;
-margin-bottom:25px;
+font-size:20px;
+line-height:34px;
+margin-bottom:20px;
 color:#ffcc66;
 font-weight:600;
-line-height:38px;
 }
 
-.hero-content h1{
-font-size:78px;
-font-weight:800;
+.hero h1{
+font-size:75px;
 margin-bottom:20px;
-line-height:1.1;
+font-weight:800;
 }
 
-.hero-content p{
-font-size:25px;
-line-height:40px;
+.hero p{
+font-size:24px;
+line-height:38px;
 }
 
 /* MOVING TEXT */
@@ -169,18 +137,16 @@ background:linear-gradient(90deg,#0f172a,#1e293b);
 padding:14px 0;
 border-radius:10px;
 margin-top:25px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
 
 .moving-text span{
 display:inline-block;
 white-space:nowrap;
-color:#fff;
 font-size:24px;
 font-weight:700;
+color:white;
 padding-left:100%;
-animation:moveText 15s linear infinite;
-text-shadow:0 0 10px #38bdf8;
+animation:moveText 14s linear infinite;
 }
 
 @keyframes moveText{
@@ -203,19 +169,17 @@ padding:90px 10%;
 
 .section h2{
 text-align:center;
-margin-bottom:50px;
-font-size:44px;
-color:#0b1f3a;
-font-weight:800;
+font-size:42px;
+margin-bottom:40px;
+color:#081428;
 }
 
 .about-text{
+max-width:1000px;
+margin:auto;
 text-align:center;
 font-size:20px;
 line-height:38px;
-max-width:1000px;
-margin:auto;
-color:#444;
 }
 
 /* CARDS */
@@ -229,12 +193,11 @@ gap:30px;
 .card{
 background:white;
 padding:35px;
-border-radius:22px;
+border-radius:20px;
 flex:1 1 300px;
-border-top:5px solid #ff9933;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.5s;
 text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
 .card:hover{
@@ -247,28 +210,20 @@ margin-bottom:20px;
 }
 
 .card h3{
-margin-bottom:15px;
 font-size:24px;
+margin-bottom:15px;
 }
 
 .card p{
-font-size:17px;
 line-height:30px;
 color:#555;
-}
-
-.vehicle-img{
-width:140px;
-height:100px;
-object-fit:contain;
-margin-bottom:20px;
 }
 
 /* STATS */
 
 .stats{
-background:#0b1f3a;
-padding:90px 10%;
+background:#081428;
+padding:80px 10%;
 color:white;
 }
 
@@ -284,7 +239,7 @@ text-align:center;
 }
 
 .stat h1{
-font-size:65px;
+font-size:60px;
 color:#ff9933;
 margin-bottom:10px;
 }
@@ -297,22 +252,20 @@ font-size:22px;
 
 .slider{
 overflow:hidden;
-position:relative;
-width:100%;
 }
 
 .slide-track{
 display:flex;
-width:calc(340px * 12);
+width:calc(320px * 12);
 animation:scroll 30s linear infinite;
 }
 
 .slide-track img{
-width:320px;
-height:230px;
+width:300px;
+height:220px;
 object-fit:cover;
 margin:10px;
-border-radius:22px;
+border-radius:20px;
 }
 
 @keyframes scroll{
@@ -322,7 +275,7 @@ transform:translateX(0);
 }
 
 100%{
-transform:translateX(calc(-340px * 6));
+transform:translateX(calc(-320px * 6));
 }
 
 }
@@ -332,13 +285,13 @@ transform:translateX(calc(-340px * 6));
 .contact-box{
 background:white;
 padding:40px;
-border-radius:25px;
-box-shadow:0 10px 35px rgba(0,0,0,0.08);
-line-height:45px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
 .contact-box p{
 font-size:18px;
+line-height:38px;
 }
 
 /* FORM */
@@ -347,35 +300,39 @@ font-size:18px;
 display:flex;
 flex-direction:column;
 gap:18px;
-margin-top:35px;
+margin-top:30px;
 }
 
 .contact-form input,
 .contact-form textarea{
 padding:16px;
 border:1px solid #ccc;
-border-radius:12px;
+border-radius:10px;
 font-size:16px;
 }
 
+.contact-form textarea{
+height:130px;
+resize:none;
+}
+
 .contact-form button{
-background:linear-gradient(45deg,#ff9933,#ff6600);
-color:white;
 padding:16px;
 border:none;
-border-radius:12px;
+background:#ff7a00;
+color:white;
 font-size:18px;
-font-weight:700;
+border-radius:10px;
 cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-background:#0b1f3a;
+background:#081428;
 color:white;
 text-align:center;
-padding:50px;
+padding:40px;
 line-height:35px;
 }
 
@@ -385,16 +342,16 @@ line-height:35px;
 position:fixed;
 bottom:20px;
 right:20px;
+width:60px;
+height:60px;
 background:#25D366;
-color:white;
-width:65px;
-height:65px;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:34px;
+font-size:32px;
 text-decoration:none;
+color:white;
 }
 
 /* MOBILE */
@@ -412,7 +369,7 @@ gap:15px;
 
 .logo{
 font-size:18px;
-line-height:30px;
+line-height:28px;
 }
 
 .menu{
@@ -420,18 +377,16 @@ justify-content:center;
 }
 
 .menu a{
-margin:5px;
 font-size:15px;
 }
 
 .hero{
-height:auto;
-padding:110px 15px 70px;
-background-attachment:scroll;
+padding:120px 15px 70px;
+min-height:auto;
 }
 
 .hero-content{
-padding:30px 18px;
+padding:30px 20px;
 }
 
 .gov-logo{
@@ -440,16 +395,21 @@ width:80px;
 
 .approved{
 font-size:15px;
-line-height:26px;
+line-height:28px;
 }
 
-.hero-content h1{
+.hero h1{
 font-size:42px;
 }
 
-.hero-content p{
+.hero p{
 font-size:18px;
 line-height:30px;
+}
+
+.moving-text span{
+font-size:16px;
+animation:moveText 12s linear infinite;
 }
 
 .section{
@@ -457,7 +417,7 @@ padding:60px 5%;
 }
 
 .section h2{
-font-size:32px;
+font-size:30px;
 }
 
 .about-text{
@@ -469,6 +429,19 @@ line-height:32px;
 padding:25px;
 }
 
+.card h3{
+font-size:20px;
+}
+
+.card p{
+font-size:15px;
+line-height:28px;
+}
+
+.service-icon{
+font-size:42px;
+}
+
 .slide-track img{
 width:220px;
 height:160px;
@@ -478,19 +451,28 @@ height:160px;
 font-size:42px;
 }
 
+.stat p{
+font-size:18px;
+}
+
 .contact-box{
 padding:25px;
 }
 
-.whatsapp{
-width:58px;
-height:58px;
-font-size:28px;
+.contact-box p{
+font-size:16px;
+line-height:32px;
 }
 
-.moving-text span{
-font-size:16px;
-animation:moveText 12s linear infinite;
+footer{
+padding:30px 15px;
+font-size:14px;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+font-size:28px;
 }
 
 }
@@ -510,17 +492,20 @@ Pranamroadguru Auto Fitness Pvt. Ltd (ATS)
 </div>
 
 <div class="menu">
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#vehicle">Vehicle Types</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </nav>
 
 </header>
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -531,36 +516,50 @@ src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
 class="gov-logo">
 
 <p class="approved">
+
 Approved By Ministry of Road Transport & Highways
 <br>
 Government of India
+
 </p>
 
 <h1>ATS NOIDA</h1>
 
 <p>
+
 Advanced Automated Vehicle
 <br>
 Fitness Testing Station
+
 </p>
 
 <div class="moving-text">
-<span>🚗 Get your Vehicle Fitness Report After Testing At Our ATS 🚗</span>
+<span>
+🚗 Get your Vehicle Fitness Report After Testing At Our ATS 🚗
+</span>
 </div>
 
 </div>
 
 </section>
+
+<!-- ABOUT -->
 
 <section class="section" id="about">
 
 <h2>About ATS NOIDA</h2>
 
 <p class="about-text">
+
 NOIDA ATS provides advanced automated vehicle fitness testing services using modern inspection technology and high precision testing equipment.
+
+We ensure all commercial vehicles meet government safety and environmental standards.
+
 </p>
 
 </section>
+
+<!-- SERVICES -->
 
 <section class="section" id="services">
 
@@ -577,18 +576,20 @@ NOIDA ATS provides advanced automated vehicle fitness testing services using mod
 <div class="card">
 <div class="service-icon">🚘</div>
 <h3>Suspension Test</h3>
-<p>High precision suspension testing machine.</p>
+<p>Vehicle balance and stability testing.</p>
 </div>
 
 <div class="card">
 <div class="service-icon">🌿</div>
 <h3>Emission Test</h3>
-<p>Emission testing systems for Diesel and CNG vehicles.</p>
+<p>Emission testing systems for commercial vehicles.</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- STATS -->
 
 <section class="stats">
 
@@ -612,6 +613,8 @@ NOIDA ATS provides advanced automated vehicle fitness testing services using mod
 </div>
 
 </section>
+
+<!-- GALLERY -->
 
 <section class="section" id="gallery">
 
@@ -641,6 +644,8 @@ NOIDA ATS provides advanced automated vehicle fitness testing services using mod
 
 </section>
 
+<!-- CONTACT -->
+
 <section class="section" id="contact">
 
 <h2>Contact Us</h2>
@@ -657,6 +662,10 @@ NOIDA ATS provides advanced automated vehicle fitness testing services using mod
 
 <p>
 📧 Noidaatsroadguru@gmail.com
+</p>
+
+<p>
+🕒 Monday - Saturday | 10 AM - 6 PM
 </p>
 
 <form class="contact-form">
@@ -677,15 +686,21 @@ Send Message
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 <h3>NOIDA ATS</h3>
 
 <p>Automated Testing Station</p>
 
+<p>Operated By Pranamroadguru Pvt. Ltd.</p>
+
 <p>© 2026 All Rights Reserved</p>
 
 </footer>
+
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/918882162152"
 class="whatsapp"
@@ -696,5 +711,6 @@ target="_blank">
 </a>
 
 </body>
+
 </html>
 ```
