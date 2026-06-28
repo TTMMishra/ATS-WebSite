@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +9,18 @@
 
 <title>NOIDA ATS - Automated Testing Station</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -28,15 +33,16 @@ color:#222;
 overflow-x:hidden;
 }
 
-/* Header */
+/* HEADER */
 
 header{
-background:#0b1f3a;
-padding:20px 50px;
+background:rgba(8,20,40,0.95);
+backdrop-filter:blur(10px);
+padding:18px 60px;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.2);
+box-shadow:0 2px 15px rgba(0,0,0,0.2);
 }
 
 nav{
@@ -47,116 +53,249 @@ flex-wrap:wrap;
 }
 
 .logo{
-font-size:32px;
-font-weight:bold;
+font-size:34px;
+font-weight:800;
 color:white;
+letter-spacing:1px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-size:18px;
+font-size:17px;
+font-weight:500;
 transition:0.3s;
-font-weight:600;
+position:relative;
+}
+
+.menu a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#ff9933;
+transition:0.4s;
+}
+
+.menu a:hover::after{
+width:100%;
 }
 
 .menu a:hover{
 color:#ff9933;
 }
 
-/* Hero Section */
+/* HERO */
 
 .hero{
-height:650px;
+height:100vh;
+position:relative;
+overflow:hidden;
+
 background:
-linear-gradient(rgba(11,31,58,.75),rgba(11,31,58,.75)),
+linear-gradient(rgba(5,15,35,0.80),rgba(5,15,35,0.82)),
 url('ATS1.jpg');
 
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
 
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
 padding:20px;
+color:white;
 }
 
-.hero-content h1{
-font-size:65px;
-margin-bottom:20px;
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+
+background:
+radial-gradient(circle at top right,
+rgba(255,153,51,0.20),
+transparent 40%),
+
+radial-gradient(circle at bottom left,
+rgba(0,180,255,0.15),
+transparent 35%);
+
+animation:heroAnimation 8s infinite alternate;
 }
 
-.hero-content p{
-font-size:25px;
-margin-bottom:20px;
+@keyframes heroAnimation{
+
+0%{
+transform:scale(1);
 }
 
-/* Government Logo */
+100%{
+transform:scale(1.08);
+}
+
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+
+padding:60px;
+border-radius:30px;
+
+max-width:900px;
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 8px 40px rgba(0,0,0,0.35);
+}
 
 .gov-logo{
 width:120px;
-margin-bottom:20px;
-filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+margin-bottom:25px;
+filter:drop-shadow(0 4px 15px rgba(0,0,0,0.6));
 }
 
 .approved{
 font-size:22px;
-margin-bottom:30px;
+margin-bottom:25px;
 color:#ffcc66;
-font-weight:bold;
-line-height:35px;
+font-weight:600;
+line-height:38px;
 }
 
-/* Sections */
+.hero-content h1{
+font-size:78px;
+font-weight:800;
+margin-bottom:20px;
+line-height:1.1;
+
+text-shadow:
+0 5px 25px rgba(0,0,0,0.4);
+}
+
+.hero-content p{
+font-size:25px;
+line-height:40px;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:35px;
+padding:16px 40px;
+
+background:linear-gradient(45deg,#ff9933,#ff6600);
+
+color:white;
+text-decoration:none;
+
+font-size:20px;
+font-weight:700;
+
+border-radius:50px;
+
+transition:0.4s;
+
+box-shadow:
+0 6px 20px rgba(255,102,0,0.4);
+}
+
+.hero-btn:hover{
+transform:translateY(-5px) scale(1.05);
+
+box-shadow:
+0 12px 35px rgba(255,102,0,0.5);
+}
+
+/* SECTIONS */
 
 .section{
-padding:80px 10%;
+padding:90px 10%;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:50px;
+font-size:44px;
 color:#0b1f3a;
-font-size:42px;
+font-weight:800;
 }
 
-/* Cards */
+/* ABOUT */
+
+.about-text{
+text-align:center;
+font-size:20px;
+line-height:38px;
+max-width:1000px;
+margin:auto;
+color:#444;
+}
+
+/* CARDS */
 
 .cards{
 display:flex;
 flex-wrap:wrap;
-gap:25px;
+gap:30px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+padding:35px;
+border-radius:22px;
+
 flex:1;
-min-width:250px;
-transition:0.4s;
+min-width:260px;
+
 border-top:5px solid #ff9933;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.08);
+
+transition:0.5s;
+opacity:0;
+transform:translateY(50px);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:
+translateY(-12px)
+scale(1.03);
+
+box-shadow:
+0 18px 45px rgba(0,0,0,0.15);
 }
 
 .card h3{
 color:#0b1f3a;
 margin-bottom:15px;
+font-size:24px;
 }
 
-/* Stats */
+.card p{
+font-size:17px;
+line-height:30px;
+color:#555;
+}
+
+/* STATS */
 
 .stats{
 background:#0b1f3a;
+padding:90px 10%;
 color:white;
-padding:80px 10%;
 }
 
 .stats-container{
@@ -171,11 +310,16 @@ text-align:center;
 }
 
 .stat h1{
-font-size:60px;
+font-size:65px;
 color:#ff9933;
+margin-bottom:10px;
 }
 
-/* Gallery Slider */
+.stat p{
+font-size:22px;
+}
+
+/* GALLERY */
 
 .slider{
 overflow:hidden;
@@ -185,22 +329,29 @@ width:100%;
 
 .slide-track{
 display:flex;
-width:calc(320px * 12);
+width:calc(340px * 12);
 animation:scroll 30s linear infinite;
 }
 
 .slide-track img{
-width:300px;
-height:220px;
+width:320px;
+height:230px;
 object-fit:cover;
+
 margin:10px;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-transition:0.4s;
+
+border-radius:22px;
+
+border:3px solid white;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.2);
+
+transition:0.5s;
 }
 
 .slide-track img:hover{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 @keyframes scroll{
@@ -210,95 +361,116 @@ transform:translateX(0);
 }
 
 100%{
-transform:translateX(calc(-320px * 6));
+transform:translateX(calc(-340px * 6));
 }
 
 }
 
-/* Contact */
+/* CONTACT */
 
 .contact-box{
 background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-line-height:40px;
+padding:40px;
+border-radius:25px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.08);
+
+line-height:45px;
 }
 
-/* Contact Form */
+.contact-box p{
+font-size:18px;
+}
+
+/* FORM */
 
 .contact-form{
 display:flex;
 flex-direction:column;
-gap:15px;
-margin-top:30px;
+gap:18px;
+margin-top:35px;
 }
 
 .contact-form input,
 .contact-form textarea{
-padding:15px;
+padding:16px;
 border:1px solid #ccc;
-border-radius:10px;
+border-radius:12px;
 font-size:16px;
+outline:none;
 }
 
 .contact-form textarea{
-height:120px;
+height:130px;
 resize:none;
 }
 
 .contact-form button{
-background:#ff9933;
+background:linear-gradient(45deg,#ff9933,#ff6600);
 color:white;
-padding:15px;
+
+padding:16px;
 border:none;
-border-radius:10px;
+border-radius:12px;
+
 font-size:18px;
+font-weight:700;
+
 cursor:pointer;
-transition:0.3s;
-font-weight:bold;
+
+transition:0.4s;
 }
 
 .contact-form button:hover{
-background:#e67e00;
+transform:translateY(-3px);
 }
 
-/* WhatsApp */
+/* FOOTER */
+
+footer{
+background:#0b1f3a;
+color:white;
+text-align:center;
+padding:50px;
+line-height:35px;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
+
 background:#25D366;
 color:white;
-width:60px;
-height:60px;
+
+width:65px;
+height:65px;
+
 border-radius:50%;
+
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:32px;
+
+font-size:34px;
 text-decoration:none;
-box-shadow:0 2px 10px rgba(0,0,0,0.3);
+
+box-shadow:
+0 5px 20px rgba(0,0,0,0.3);
+
 z-index:1000;
-transition:0.3s;
+
+transition:0.4s;
 }
 
 .whatsapp:hover{
 transform:scale(1.1);
 }
 
-/* Footer */
-
-footer{
-background:#0b1f3a;
-color:white;
-text-align:center;
-padding:40px;
-line-height:30px;
-}
-
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -321,29 +493,39 @@ margin:10px;
 }
 
 .hero{
-height:550px;
+height:auto;
+padding:120px 20px;
+}
+
+.hero-content{
+padding:35px 25px;
 }
 
 .hero-content h1{
-font-size:38px;
+font-size:45px;
 }
 
 .hero-content p{
 font-size:18px;
+line-height:32px;
 }
 
 .approved{
 font-size:16px;
-line-height:28px;
+line-height:30px;
 }
 
 .section{
-padding:60px 5%;
+padding:70px 5%;
 }
 
 .slide-track img{
 width:250px;
 height:180px;
+}
+
+.stat h1{
+font-size:45px;
 }
 
 }
@@ -354,7 +536,7 @@ height:180px;
 
 <body>
 
-<!-- Header -->
+<!-- HEADER -->
 
 <header>
 
@@ -366,17 +548,17 @@ NOIDA ATS
 
 <div class="menu">
 
-<a href="#home">🏠 Home</a>
+<a href="#home">Home</a>
 
-<a href="#about">ℹ️ About</a>
+<a href="#about">About</a>
 
-<a href="#services">🛠️ Services</a>
+<a href="#services">Services</a>
 
-<a href="#vehicle">🚚 Vehicle Types</a>
+<a href="#vehicle">Vehicle Types</a>
 
-<a href="#gallery">🖼️ Gallery</a>
+<a href="#gallery">Gallery</a>
 
-<a href="#contact">📞 Contact</a>
+<a href="#contact">Contact</a>
 
 </div>
 
@@ -384,48 +566,61 @@ NOIDA ATS
 
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
 class="gov-logo">
 
 <p class="approved">
+
 Approved By Ministry of Road Transport & Highways
 <br>
 Government of India
+
 </p>
 
-<h1>Automated Testing Station</h1>
+<h1>
+NOIDA ATS
+</h1>
 
 <p>
-Vehicle Fitness Testing & Inspection Services
+
+Advanced Automated Vehicle
+<br>
+Fitness Testing Station
+
 </p>
+
+<a href="#contact" class="hero-btn">
+Book Inspection
+</a>
 
 </div>
 
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 
 <section class="section" id="about">
 
 <h2>About NOIDA ATS</h2>
 
-<p style="text-align:center;font-size:20px;line-height:35px;max-width:1000px;margin:auto;">
+<p class="about-text">
 
-NOIDA ATS provides automated vehicle fitness testing services using modern technology and advanced testing equipment.
+NOIDA ATS provides advanced automated vehicle fitness testing services using modern inspection technology and high precision testing equipment.
 
-We ensure commercial vehicles meet all safety and environmental standards with accurate automated inspection systems.
+We ensure all commercial vehicles meet government safety, performance and environmental standards through accurate automated testing systems.
 
 </p>
 
 </section>
 
-<!-- Services -->
+<!-- SERVICES -->
 
 <section class="section" id="services">
 
@@ -435,29 +630,29 @@ We ensure commercial vehicles meet all safety and environmental standards with a
 
 <div class="card">
 <h3>Brake Testing</h3>
-<p>Automated brake efficiency testing.</p>
+<p>Automated brake efficiency and safety inspection system.</p>
 </div>
 
 <div class="card">
 <h3>Emission Testing</h3>
-<p>Vehicle pollution compliance inspection.</p>
+<p>Advanced pollution and emission compliance inspection.</p>
 </div>
 
 <div class="card">
 <h3>Headlight Testing</h3>
-<p>Headlight beam alignment testing.</p>
+<p>Headlight beam alignment and visibility inspection.</p>
 </div>
 
 <div class="card">
 <h3>Suspension Testing</h3>
-<p>Suspension and shock absorber inspection.</p>
+<p>Suspension and shock absorber testing system.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- Vehicle Types -->
+<!-- VEHICLE TYPES -->
 
 <section class="section" id="vehicle">
 
@@ -489,7 +684,7 @@ We ensure commercial vehicles meet all safety and environmental standards with a
 
 </section>
 
-<!-- Stats -->
+<!-- STATS -->
 
 <section class="stats">
 
@@ -514,7 +709,7 @@ We ensure commercial vehicles meet all safety and environmental standards with a
 
 </section>
 
-<!-- Gallery -->
+<!-- GALLERY -->
 
 <section class="section" id="gallery">
 
@@ -544,11 +739,11 @@ We ensure commercial vehicles meet all safety and environmental standards with a
 
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
-<h2>📞 Contact Us</h2>
+<h2>Contact Us</h2>
 
 <div class="contact-box">
 
@@ -580,7 +775,9 @@ Monday - Saturday | 10:00 AM - 06:00 PM
 
 <textarea placeholder="Your Message"></textarea>
 
-<button type="submit">Send Message</button>
+<button type="submit">
+Send Message
+</button>
 
 </form>
 
@@ -590,9 +787,10 @@ Monday - Saturday | 10:00 AM - 06:00 PM
 src="https://www.google.com/maps?q=Greater+Noida&output=embed"
 width="100%"
 height="350"
-style="border:0;border-radius:10px;"
+style="border:0;border-radius:15px;"
 allowfullscreen=""
 loading="lazy">
+
 </iframe>
 
 </div>
@@ -601,7 +799,7 @@ loading="lazy">
 
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -609,7 +807,7 @@ loading="lazy">
 
 <p>Automated Testing Station</p>
 
-<p>Dhoom ManikPur Dadri Greater Noida, Uttar Pradesh</p>
+<p>Dhoom Manikpur Dadri Greater Noida, Uttar Pradesh</p>
 
 <p>Operated By Pranamroadguru Pvt. Ltd.</p>
 
@@ -617,12 +815,49 @@ loading="lazy">
 
 </footer>
 
-<!-- WhatsApp -->
+<!-- WHATSAPP -->
 
-<a href="https://wa.me/918882162152" class="whatsapp" target="_blank">
+<a href="https://wa.me/918882162152"
+class="whatsapp"
+target="_blank">
+
 💬
+
 </a>
 
+<!-- ANIMATION SCRIPT -->
+
+<script>
+
+const cards=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top < window.innerHeight-100){
+
+card.style.opacity='1';
+card.style.transform='translateY(0)';
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity='0';
+card.style.transform='translateY(50px)';
+card.style.transition='0.8s';
+
+});
+
+</script>
+
 </body>
-
-
+</html>
+```
