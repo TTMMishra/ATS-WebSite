@@ -65,6 +65,7 @@ height:550px;
 background:
 linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
 url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc');
+
 background-size:cover;
 background-position:center;
 
@@ -157,20 +158,77 @@ text-align:center;
 font-size:60px;
 }
 
-/* Gallery */
+/* GALLERY SLIDER */
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+.slider{
+width:100%;
+overflow:hidden;
+position:relative;
+border-radius:10px;
 }
 
-.gallery img{
+.slides{
+display:flex;
+width:600%;
+animation:slide 18s infinite;
+}
+
+.slides img{
 width:100%;
-height:250px;
+height:450px;
 object-fit:cover;
+flex-shrink:0;
 border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* SLIDE ANIMATION */
+
+@keyframes slide{
+
+0%{
+transform:translateX(0%);
+}
+
+15%{
+transform:translateX(0%);
+}
+
+20%{
+transform:translateX(-100%);
+}
+
+35%{
+transform:translateX(-100%);
+}
+
+40%{
+transform:translateX(-200%);
+}
+
+55%{
+transform:translateX(-200%);
+}
+
+60%{
+transform:translateX(-300%);
+}
+
+75%{
+transform:translateX(-300%);
+}
+
+80%{
+transform:translateX(-400%);
+}
+
+95%{
+transform:translateX(-400%);
+}
+
+100%{
+transform:translateX(-500%);
+}
+
 }
 
 /* Contact */
@@ -210,6 +268,10 @@ font-size:40px;
 
 .hero p{
 font-size:18px;
+}
+
+.slides img{
+height:250px;
 }
 
 }
@@ -355,7 +417,9 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 
 <h2>Gallery</h2>
 
-<div class="gallery">
+<div class="slider">
+
+<div class="slides">
 
 <img src="ATS4.jpeg">
 <img src="ATS2.jpeg">
@@ -363,6 +427,9 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 <img src="ATS3.jpeg">
 <img src="ATS5.jpeg">
 <img src="ATS.webp">
+
+</div>
+
 </div>
 
 </section>
@@ -392,7 +459,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 <p>Automated Testing Station</p>
 
 <p>Dhoom ManikPur Dadri Greater Noida, Uttar Pradesh</p>
-  <p>Operated By Pranamroadguru Pvt.Ltd</p>
+
+<p>Operated By Pranamroadguru Pvt.Ltd</p>
 
 <p>© 2026 All Rights Reserved</p>
 
