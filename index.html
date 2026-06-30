@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -25,7 +26,7 @@ background:#f4f6f9;
 color:#333;
 }
 
-/* Header */
+/* HEADER */
 
 header{
 background:#003366;
@@ -39,6 +40,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
 }
 
 .logo{
@@ -52,13 +54,14 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-size:18px;
+transition:0.3s;
 }
 
 .menu a:hover{
 color:#ffd700;
 }
 
-/* Hero */
+/* HERO SECTION */
 
 .hero{
 height:550px;
@@ -74,6 +77,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
+padding:20px;
 }
 
 .hero h1{
@@ -94,9 +98,14 @@ color:black;
 font-weight:bold;
 text-decoration:none;
 border-radius:5px;
+transition:0.3s;
 }
 
-/* Sections */
+.btn:hover{
+background:white;
+}
+
+/* SECTIONS */
 
 .section{
 padding:80px 10%;
@@ -109,7 +118,7 @@ color:#003366;
 font-size:40px;
 }
 
-/* Cards */
+/* CARDS */
 
 .cards{
 display:flex;
@@ -136,7 +145,7 @@ color:#003366;
 margin-bottom:15px;
 }
 
-/* Stats */
+/* STATS */
 
 .stats{
 background:#003366;
@@ -148,6 +157,7 @@ padding:70px 10%;
 display:flex;
 justify-content:space-around;
 flex-wrap:wrap;
+gap:30px;
 }
 
 .stat{
@@ -162,26 +172,27 @@ font-size:60px;
 
 .slider{
 width:100%;
+max-width:1000px;
+margin:auto;
 overflow:hidden;
-position:relative;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 2px 15px rgba(0,0,0,0.2);
 }
 
 .slides{
 display:flex;
 width:600%;
-animation:slide 18s infinite;
+animation:slide 24s infinite;
 }
 
 .slides img{
-width:100%;
-height:450px;
+width:16.66%;
+height:500px;
 object-fit:cover;
 flex-shrink:0;
-border-radius:10px;
 }
 
-/* SLIDE ANIMATION */
+/* SLIDER ANIMATION */
 
 @keyframes slide{
 
@@ -194,44 +205,44 @@ transform:translateX(0%);
 }
 
 20%{
-transform:translateX(-100%);
+transform:translateX(-16.66%);
 }
 
 35%{
-transform:translateX(-100%);
+transform:translateX(-16.66%);
 }
 
 40%{
-transform:translateX(-200%);
+transform:translateX(-33.33%);
 }
 
 55%{
-transform:translateX(-200%);
+transform:translateX(-33.33%);
 }
 
 60%{
-transform:translateX(-300%);
+transform:translateX(-50%);
 }
 
 75%{
-transform:translateX(-300%);
+transform:translateX(-50%);
 }
 
 80%{
-transform:translateX(-400%);
+transform:translateX(-66.66%);
 }
 
 95%{
-transform:translateX(-400%);
+transform:translateX(-66.66%);
 }
 
 100%{
-transform:translateX(-500%);
+transform:translateX(-83.33%);
 }
 
 }
 
-/* Contact */
+/* CONTACT */
 
 .contact-box{
 background:white;
@@ -239,20 +250,26 @@ padding:30px;
 border-radius:10px;
 box-shadow:0 2px 12px rgba(0,0,0,0.1);
 line-height:35px;
+font-size:18px;
 }
 
-/* Footer */
+/* FOOTER */
 
 footer{
 background:#003366;
 color:white;
 text-align:center;
 padding:30px;
+line-height:30px;
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
+
+header{
+padding:20px;
+}
 
 nav{
 flex-direction:column;
@@ -260,6 +277,16 @@ flex-direction:column;
 
 .menu{
 margin-top:15px;
+text-align:center;
+}
+
+.menu a{
+display:inline-block;
+margin:10px;
+}
+
+.hero{
+height:450px;
 }
 
 .hero h1{
@@ -270,16 +297,27 @@ font-size:40px;
 font-size:18px;
 }
 
+.section h2{
+font-size:32px;
+}
+
 .slides img{
 height:250px;
+}
+
+.stat h1{
+font-size:40px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
 
@@ -302,6 +340,8 @@ NOIDA ATS
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
 <div>
@@ -320,6 +360,8 @@ Contact Us
 
 </section>
 
+<!-- ABOUT -->
+
 <section class="section" id="about">
 
 <h2>About NOIDA ATS</h2>
@@ -329,6 +371,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 </p>
 
 </section>
+
+<!-- SERVICES -->
 
 <section class="section" id="services">
 
@@ -360,6 +404,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 
 </section>
 
+<!-- VEHICLES -->
+
 <section class="section" id="vehicle">
 
 <h2>Vehicle Categories</h2>
@@ -390,6 +436,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 
 </section>
 
+<!-- STATS -->
+
 <section class="stats">
 
 <div class="stats-container">
@@ -413,6 +461,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 
 </section>
 
+<!-- GALLERY -->
+
 <section class="section" id="gallery">
 
 <h2>Gallery</h2>
@@ -421,18 +471,20 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 
 <div class="slides">
 
-<img src="ATS4.jpeg">
-<img src="ATS2.jpeg">
-<img src="ATS1.jpg">
-<img src="ATS3.jpeg">
-<img src="ATS5.jpeg">
-<img src="ATS.webp">
+<img src="ATS4.jpeg" alt="">
+<img src="ATS2.jpeg" alt="">
+<img src="ATS1.jpg" alt="">
+<img src="ATS3.jpeg" alt="">
+<img src="ATS5.jpeg" alt="">
+<img src="ATS.webp" alt="">
 
 </div>
 
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
@@ -451,6 +503,8 @@ NOIDA ATS provides automated vehicle fitness testing services using modern techn
 </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
